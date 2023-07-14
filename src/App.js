@@ -13,8 +13,8 @@ function App() {
             entries.forEach(entry => {
                 if (entry.intersectionRatio > 0) {
                     entry.target.classList.add('show');
-                // } else {
-                //     entry.target.classList.remove('show');
+                    // } else {
+                    //     entry.target.classList.remove('show');
                 }
             });
         });
@@ -23,7 +23,7 @@ function App() {
         projects.forEach(project => {
             observer.observe(project);
         });
-    }, []);
+    });
 
     return (
         <div className="App">
