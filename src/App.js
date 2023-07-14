@@ -3,6 +3,7 @@ import './App.css';
 import {NavBar} from './components/NavBar';
 import {Banner} from './components/Banner';
 import {Projects} from './components/Projects';
+import {Footer} from './components/Footer';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {useEffect} from "react";
 
@@ -32,7 +33,7 @@ function App() {
             {/*<Skills />*/}
             <Projects/>
             {/*<Contact />*/}
-            {/*<Footer />*/}
+            <Footer />
         </div>
     );
 }

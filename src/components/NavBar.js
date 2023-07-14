@@ -13,14 +13,23 @@ export const NavBar = () => {
 
     useEffect(() => {
         const onScroll = () => {
-            if (window.scrollY > 50) {
+            if (window.scrollY > 50 ){
                 setScrolled(true);
-            } else {
+            } else if (window.innerWidth >= 768){
+                setScrolled(false);
+            }
+        }
+
+        const onResize = () => {
+            if (window.innerWidth < 768) {
+                setScrolled(true);
+            } else if (window.scrollY < 50){
                 setScrolled(false);
             }
         }
 
         window.addEventListener('scroll', onScroll);
+        window.addEventListener('resize', onResize);
 
         return () => window.removeEventListener('scroll', onScroll);
     }, []);
@@ -41,8 +50,8 @@ export const NavBar = () => {
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="ms-auto">
                         <Nav.Link href="#home" className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('home')}>Home</Nav.Link>
-                        <Nav.Link href="#skills" className={activeLink === 'skills' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('skills')}>Skills</Nav.Link>
-                        <Nav.Link href="#project" className={activeLink === 'project' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('project')}>Projects</Nav.Link>
+                        {/*<Nav.Link href="#skills" className={activeLink === 'skills' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('skills')}>Skills</Nav.Link>*/}
+                        <Nav.Link href="#projects" className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('projects')}>Projects</Nav.Link>
                     </Nav>
                     <span className="navbar-text">
               <div className="social-icon">

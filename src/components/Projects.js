@@ -17,6 +17,7 @@ export const Projects = () => {
             link1Text: "Link 1",
             link2: "https://example.com",
             link2Text: "Link 2",
+            imageLocation: "left",
         },
         {
             image: projImg2,
@@ -27,6 +28,7 @@ export const Projects = () => {
             link1Text: "Link 1",
             link2: "https://example.com",
             link2Text: "Link 2",
+            imageLocation: "right",
         },
         {
             image: projImg3,
@@ -37,13 +39,14 @@ export const Projects = () => {
             link1Text: "Link 1",
             link2: "https://example.com",
             link2Text: "Link 2",
+            imageLocation: "left",
         },
     ];
 
     return (
-        <section className="project" id="project">
+        <section className="projects" id="projects">
             <Container>
-                <h1>Projects</h1>
+                <h1>PROJECTS</h1>
                 <Row>
                     <Col size={12}>
                         <Project {...projects[0]} />
