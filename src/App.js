@@ -20,9 +20,23 @@ function App() {
             });
         });
 
+        const observer2 = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.intersectionRatio > 0) {
+                    entry.target.classList.add('animate__animated', 'animate__fadeIn');
+                } else {
+                    entry.target.classList.remove('animate__animated', 'animate__fadeIn');
+                }
+            });
+        });
+
         const projects = document.querySelectorAll('.project');
+        const letters = document.querySelectorAll('.letters');
         projects.forEach(project => {
             observer.observe(project);
+        });
+        projects.forEach(letter => {
+            observer2.observe(letter);
         });
     });
 

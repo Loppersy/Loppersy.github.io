@@ -270,16 +270,34 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 /************ Banner Css ************/
 .banner {
   margin: 0;
-  height: 99.9vh;
+  height: 100vh;
   min-height: 40rem;
   width: auto;
-  background-image: url('./assets/img/banner-bg.png');
-  background-position: top center;
-  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.57);
   display: grid;
   padding-top: 2rem;
   place-items: center;
   align-content: center;
+  overflow: hidden;
+}
+.banner .video-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  align-content: center;
+  vertical-align: center;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.banner .video-container video {
+  position: absolute;
+  width: 100vw;
+  height: auto;
+  top: -7%;
+  left: 0;
 }
 
 .banner .tagline {
@@ -296,9 +314,17 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   font-size: 4.5rem;
   font-weight: 700;
   letter-spacing: 0.08rem;
-  line-height: 1;
+  line-height: .5;
   margin-bottom: 2rem;
   display: block;
+  text-align: left;
+}
+
+.banner h2 {
+  line-height: .5;
+  margin-bottom: 2rem;
+  display: block;
+  text-align: left;
 }
 .banner p {
   color: #B8B8B8;
@@ -382,6 +408,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   width: 50%;
   height: auto;
   margin: 1rem 3rem 2rem 3rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .project-details p {
@@ -402,8 +430,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 .project-details .my-tag {
-  justify-content: center;
-  align-items: center;
+  font-size: .8rem;
   margin: .5rem 1rem .5rem 0;
   padding: .5rem 1rem .5rem 1rem;
   background: linear-gradient(90.21deg, rgba(170, 54, 124, 0.5) -5.91%, rgba(74, 47, 189, 0.5) 111.58%);
@@ -480,7 +507,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .projects h1 {
   aspect-ratio: auto;
   font-weight: bold;
-  padding: 1rem;
+  padding: 3rem;
   backface-visibility: hidden;
 }
 
