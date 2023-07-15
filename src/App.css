@@ -273,7 +273,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   height: 100vh;
   min-height: 40rem;
   width: auto;
-  background-color: rgba(0, 0, 0, 0.57);
+  background-color: rgba(0, 0, 0, 0.6);
   display: grid;
   padding-top: 2rem;
   place-items: center;

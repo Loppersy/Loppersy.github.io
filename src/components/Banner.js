@@ -1,7 +1,7 @@
 import Container from "react-bootstrap/Container";
 import {Col, Row} from "react-bootstrap";
 import {ArrowRightCircle} from "react-bootstrap-icons";
-import PacVideo from "../assets/video/pacman-video.webm";
+import PacVideo from "../assets/video/BGVideo.webm";
 
 export const Banner = () => {
 
