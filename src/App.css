@@ -271,7 +271,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .banner {
   margin: 0;
   height: 100vh;
-  min-height: 40rem;
   width: auto;
   background-color: rgba(0, 0, 0, 0.6);
   display: grid;
@@ -280,6 +279,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   align-content: center;
   overflow: hidden;
 }
+
 .banner .video-container {
   position: absolute;
   width: 100%;
@@ -298,6 +298,17 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   height: auto;
   top: -7%;
   left: 0;
+  transition: top 0.5s;
+}
+@media only screen and (max-aspect-ratio: 1/1) {
+
+  .banner .video-container video{
+    position: absolute;
+    width: auto;
+    height: 100vh;
+    top: 0;
+    left: 0;
+  }
 }
 
 .banner .tagline {
