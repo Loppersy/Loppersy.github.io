@@ -1,9 +1,10 @@
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import { Project } from "./Project";
 import vid1 from "../assets/video/PacDemo.webm";
-import projImg2 from "../assets/img/project-img2.png";
+import vid2 from "../assets/video/TilesDemo.webm";
 import projImg3 from "../assets/img/project-img3.png";
 import githubIcon from "../assets/img/GitHub-Logo.png";
+import googlePlayIcon from "../assets/img/google-play.svg";
 import colorSharp2 from "../assets/img/color-sharp2.png";
 
 export const Projects = () => {
@@ -16,19 +17,19 @@ export const Projects = () => {
             tags: ["Reinforcement Learning", "Python", "TensorFlow", "PyGame", "Pathfinding", "Procedural Generation"],
             link1: "https://github.com/Loppersy/ProcedurallyGeneratedPacman",
             link1Img: githubIcon,
-            link2: "https://example.com",
-            link2Text: "Link 2",
+            link2: "",
+            link2Img: "",
             imageLocation: "left",
         },
         {
-            videoDemo: projImg2,
-            title: "Project 2",
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-            tags: ["tag4", "tag5", "tag6"],
-            link1: "https://example.com",
+            videoDemo: vid2,
+            title: "Tiles - Puzzle Game",
+            description: "Tiles is a mobile puzzle game made in Unity (C#) and published in Google Play. Use your problem-solving skills to walk over all tiles on the screen, but without backtracking. New elements are introduced as the game goes on to keep the player engaged. All assets, illustrations, animations and coding were made by me.",
+            tags: ["Unity", "C#", "Photoshop", "Animation", "Mobile"],
+            link1: "https://github.com/Loppersy/Tiles",
             link1Img: githubIcon,
-            link2: "https://example.com",
-            link2Text: "Link 2",
+            link2: "https://play.google.com/store/apps/details?id=com.selofi.tiles",
+            link2Img: googlePlayIcon,
             imageLocation: "right",
         },
         {
@@ -38,8 +39,8 @@ export const Projects = () => {
             tags: ["tag7", "tag8", "tag9"],
             link1: "https://example.com",
             link1Img: githubIcon,
-            link2: "https://example.com",
-            link2Text: "Link 2",
+            link2: "",
+            link2Img: "",
             imageLocation: "left",
         },
     ];

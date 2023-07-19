@@ -306,7 +306,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     width: auto;
     height: 100vh;
     top: 0;
-    left: 0;
+    left: auto;
+    right: 0;
+
   }
 }
 
@@ -416,15 +418,15 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   --pj1-color1: rgb(40, 246, 74);
   --pj1-color2: rgb(31, 224, 249);
   --pj2-color1: rgb(246, 40, 40);
-  --pj2-color2: rgb(255, 120, 36);
+  --pj2-color2: rgb(255, 186, 36);
   --pj3-color1: rgb(163, 40, 246);
   --pj3-color2: rgb(77, 85, 255);
-  --pj1-color1a: rgba(40, 246, 74, 0.65);
-  --pj1-color2a: rgba(31, 224, 249, 0.65);
-  --pj2-color1a: rgba(246, 40, 40, 0.65);
-  --pj2-color2a: rgba(255, 120, 36, 0.65);
-  --pj3-color1a: rgba(163, 40, 246, 0.65);
-  --pj3-color2a: rgba(77, 85, 255, 0.65);
+  --pj1-color1a: rgba(40, 246, 74, 0.55);
+  --pj1-color2a: rgba(31, 224, 249, 0.55);
+  --pj2-color1a: rgba(246, 40, 40, 0.55);
+  --pj2-color2a: rgba(255, 186, 36, 0.55);
+  --pj3-color1a: rgba(163, 40, 246, 0.55);
+  --pj3-color2a: rgba(77, 85, 255, 0.55);
 }
 
 
@@ -480,12 +482,12 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   font-weight: Bold;
   text-align: center;
   color: #fff;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.5s ease-in-out;
   pointer-events: none;
 }
 
 .project .funny-title:hover{
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 
 .project .funny-title a:hover{
@@ -512,7 +514,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 /* projects */
 .project {
-  padding: 2rem;
   position: relative;
   background-color: black;
   display: flex;
@@ -528,7 +529,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .project::after{
   content: "";
   position: absolute;
-  bottom: 0rem;
+  bottom: 0;
   left: 0;
   width: 100%;
   height: .5rem;
@@ -546,17 +547,20 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   background: linear-gradient(90deg, var(--pj3-color1), var(--pj3-color2) 111.58%);
 }
 
-.project a{
-  width: 75%;
+.project .video-link{
+  width: auto;
   height: auto;
-  object-fit: contain;
-  align-self: center;
+  display: flex;
+  top: 0;
 }
 
-.project video {
-  width: 100%;
+.project .video-link video{
+  object-fit: cover;
+  width: auto;
   height: auto;
-  object-fit: contain;
+  aspect-ratio: 3/2;
+  max-width: 40vw;
+
 }
 
 .project img {
@@ -567,11 +571,10 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 .project .project-details {
-  width: 50%;
+  width: auto;
   height: auto;
-  margin: 1rem 3rem 2rem 3rem;
-  display: flex;
-  flex-direction: column;
+  margin: 2rem 1rem 1rem 1rem;
+  padding: 0 1rem 0 1rem;
 }
 
 .project-details p {
@@ -584,6 +587,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   margin: 1rem 0 1rem 0;
   color: #B8B8B8;
 }
+
 
 .project-details .project-tags {
   display: flex;
@@ -615,8 +619,22 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   background: linear-gradient(90.21deg, var(--pj3-color1a), var(--pj3-color2a) 111.58%);
 }
 
+.project-links {
+   place-content: center;
+}
+.project-links a {
+  padding: .3rem;
+}
+
+.project-links .googleImg {
+    width: 11rem;
+    height: auto;
+    object-fit: contain;
+}
+
 
 @media only screen and (max-width: 1000px) {
+
 
   .projects {
     width: 100%;
@@ -626,27 +644,25 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
   .project {
     width: 100%;
+    height: auto;
     display: flex;
     flex-direction: column;
-    padding: 1rem;
     margin: 0 0 2rem 0;
   }
-  .project a{
+  .project .project-details a{
     width: 100%;
     height: auto;
     float: none;
     object-fit: contain;
+
   }
-
-
-
-  .project video {
+  .project .video-link video{
     width: 100%;
-    float: none;
     height: auto;
     object-fit: contain;
-    margin: 0;
-    padding: 0 0 1rem 0;
+    aspect-ratio: 3/2;
+    max-width: none;
+
   }
 
   .project .project-details {
@@ -655,7 +671,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     height: auto;
     object-fit: contain;
     margin: 0;
-    padding: 0;
+    padding: 2rem 1rem 1rem 1rem;
   }
 
   .project .project-details p{
@@ -670,11 +686,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     margin: 0;
   }
 
-
-  .project .project-details .links {
-      width: 100%;
-      padding: 0;
-      margin: 0;
+  .project .funny-title:hover{
+    transform: scale(1.05);
   }
 }
 
