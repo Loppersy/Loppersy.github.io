@@ -13,6 +13,13 @@ export const Banner = () => {
         const onScroll = () => {
             if (window.scrollY > 300) {
                 setScrolled(true);
+            } else if (window.scrollY < 50) {
+                setScrolled(false);
+            }
+
+            if (window.scrollY < window.innerHeight) {
+                const distance = window.scrollY;
+                document.querySelector(".video-container").style.transform = `translateY(${distance * .5}px)`;
             }
         }
         window.addEventListener('scroll', onScroll);
@@ -22,26 +29,28 @@ export const Banner = () => {
 
     return (
         <section className={'banner'} id="home">
+            <div className={"video-container"}>
+                <video autoPlay loop muted src={PacVideo}/>
+            </div>
             <Container>
+
                 <Row className={'align-items-center'}>
+
                         <div className={"letters"}>
                             <h2>Hello! I'm</h2>
-                            <h1>Sebastian</h1>
-                            <h1>Lopez</h1>
-                            <h1>Figueroa</h1>
+                            <h1>Sebastian<br/>Lopez<br/>Figueroa</h1>
+                            <p>Software Engineer<br/>& Game Developer</p>
                             <button className={"connect"} onClick={() => console.log('connect')}>Let’s Connect <ArrowRightCircle size={25}/>
                             </button>
                         </div>
+
                 </Row>
                 <button className={"moreButton " + (scrolled ? 'scrolled' : '')} title={"See More"}>
-
                         <Nav.Link href="#projects"><ChevronCompactDown/></Nav.Link>
                 </button>
 
             </Container>
-            <section className={"video-container"}>
-                <video autoPlay loop muted src={PacVideo}/>
-            </section>
+
         </section>
     )
 }
