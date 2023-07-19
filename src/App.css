@@ -621,21 +621,29 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .projects{
   background-color: rgb(18, 18, 18);
   display: flex;
+  flex-direction: column;
   padding: 0;
   margin: 0;
   width: auto;
   height: auto;
 }
+
 .projects .header-bg {
-  background-color: #ccc;
-  background-image: linear-gradient(45deg, #eee 25%, transparent 25%, transparent 75%, #eee 75%, #eee);
-  background-size: 20px 20px;
-}
+  width: 100%;
+  height: auto;
+  margin: 2rem 0 2rem 0;
+  padding: 2rem;
+  background: url("./assets/img/hBG.png");
+  background-size: 2.5rem;
+ }
+
 .projects .header-bg  h1 {
+  all:initial;
+  color: white;
   font-weight: bold;
   padding: 2rem;
   font-size: 3rem;
-  backface-visibility: hidden;
+  letter-spacing: .2rem;
 }
 
 @media only screen and (max-width: 1000px) {

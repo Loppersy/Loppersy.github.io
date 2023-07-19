@@ -48,8 +48,8 @@ export const Projects = () => {
 
     return (
         <section className="projects" id="projects">
+            <container className={"header-bg"}><h1>PROJECTS</h1></container>
             <Container>
-                <div className={"header-bg"}><h1>PROJECTS</h1></div>
                 <Row>
                     <Col size={12}>
                         <Project {...projects[0]} />
