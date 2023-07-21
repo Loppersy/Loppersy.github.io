@@ -12,12 +12,35 @@ export const NavBar = () => {
     const [scrolled, setScrolled] = useState(false);
 
     useEffect(() => {
+
+        var activeLinks = document.querySelectorAll('.navbar-link');
         const onScroll = () => {
+            clearTimeout(timeoutId);
+            timeoutId = setTimeout(onScrollStop, 15);
+
             if (window.scrollY > 50 ){
                 setScrolled(true);
             } else if (window.innerWidth >= 768){
                 setScrolled(false);
             }
+
+
+        }
+
+        const onScrollStop = () => {
+            //Change which is the active link in the navbar depending on the scroll position
+            activeLinks.forEach(link => {
+                const section = document.querySelector(link.hash);
+                // if section is null or the page is still scrolling, return
+                if (section === null ) {
+                    return;
+                }
+                if (section.offsetTop <= window.scrollY && section.offsetTop + section.offsetHeight > window.scrollY) {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
+            });
         }
 
         const onResize = () => {
@@ -27,7 +50,7 @@ export const NavBar = () => {
                 setScrolled(false);
             }
         }
-
+        let timeoutId;
         window.addEventListener('scroll', onScroll);
         window.addEventListener('resize', onResize);
 
@@ -47,19 +70,15 @@ export const NavBar = () => {
                 <Navbar.Toggle aria-controls="basic-navbar-nav">
                     <span className="navbar-toggler-icon"></span>
                 </Navbar.Toggle>
-                <Navbar.Collapse id="basic-navbar-nav">
+                <Navbar.Collapse id="basic-navbar-nav" className={scrolled ? "navbar-scrolled" : ""}>
                     <Nav className="ms-auto">
-                        <Nav.Link href="#home" className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('home')}>Home</Nav.Link>
+                        <Nav.Link href="#home" className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('home')}><div>Home</div></Nav.Link>
+                        <Nav.Link href="#projects" className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('projects')}><div>Projects</div></Nav.Link>
                         {/*<Nav.Link href="#skills" className={activeLink === 'skills' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('skills')}>Skills</Nav.Link>*/}
-                        <Nav.Link href="#projects" className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('projects')}>Projects</Nav.Link>
+                        <Nav.Link href="#contact" className={activeLink === 'contact' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('contact')}><div>Contact</div></Nav.Link>
                     </Nav>
                     <span className="navbar-text">
-              <div className="social-icon">
-                <a href="#"><img src={navIcon1} alt="" /></a>
-                <a href="#"><img src={navIcon2} alt="" /></a>
-                <a href="#"><img src={navIcon3} alt="" /></a>
-              </div>
-              <button className="vvd"><span>Let’s Connect</span></button>
+
             </span>
                 </Navbar.Collapse>
             </Container>

@@ -11,7 +11,7 @@ export const Banner = () => {
     const [scrolled, setScrolled] = useState(false);
     useEffect(() => {
         const onScroll = () => {
-            if (window.scrollY > 300) {
+            if (window.scrollY > 150) {
                 setScrolled(true);
             } else if (window.scrollY < 50) {
                 setScrolled(false);
@@ -40,8 +40,11 @@ export const Banner = () => {
                             <h2>Hello! I'm</h2>
                             <h1>Sebastian<br/>Lopez<br/>Figueroa</h1>
                             <p>Software Engineer<br/>& Game Developer</p>
-                            <button className={"connect"} onClick={() => console.log('connect')}>Let’s Connect <ArrowRightCircle size={25}/>
-                            </button>
+                            {/*<button className={"connect"} onClick={() => console.log('connect')}>Let’s Connect <ArrowRightCircle size={25}/>*/}
+                            {/*</button>*/}
+                            {/*<button className={"connect"} onClick={() => console.log('connect')}>View Resume <ArrowRightCircle size={25}/>*/}
+                            {/*</button>*/}
+                            <button className="resume"><span>View Resume</span></button>
                         </div>
 
                 </Row>
