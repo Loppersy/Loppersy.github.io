@@ -29,13 +29,15 @@ export const NavBar = () => {
 
         const onScrollStop = () => {
             //Change which is the active link in the navbar depending on the scroll position
+            activeLinks = document.querySelectorAll('.navbar-link');
+
             activeLinks.forEach(link => {
                 const section = document.querySelector(link.hash);
                 // if section is null or the page is still scrolling, return
-                if (section === null ) {
+                if (section === null) {
                     return;
                 }
-                if (section.offsetTop <= window.scrollY && section.offsetTop + section.offsetHeight > window.scrollY) {
+                if (section.offsetTop-400 <= window.scrollY && section.offsetTop-400 + section.offsetHeight > window.scrollY) {
                     link.classList.add('active');
                 } else {
                     link.classList.remove('active');

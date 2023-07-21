@@ -20,6 +20,10 @@ export const Banner = () => {
             if (window.scrollY < window.innerHeight) {
                 const distance = window.scrollY;
                 document.querySelector(".video-container").style.transform = `translateY(${distance * .5}px)`;
+                document.querySelector(".video-container").style.display = 'block';
+
+            } else {
+                document.querySelector(".video-container").style.display = 'none';
             }
         }
         window.addEventListener('scroll', onScroll);

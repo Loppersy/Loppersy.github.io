@@ -1,4 +1,4 @@
-import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import { Project } from "./Project";
 import vid1 from "../assets/video/PacDemo.webm";
 import vid2 from "../assets/video/TilesDemo.webm";
@@ -48,7 +48,7 @@ export const Projects = () => {
 
     return (
         <section className="projects" id="projects">
-            <container className={"header-bg"}><h1>PROJECTS</h1></container>
+            <div className={"header-bg"}><h1>PROJECTS</h1></div>
             <Container>
                 <Row>
                     <Col size={12}>

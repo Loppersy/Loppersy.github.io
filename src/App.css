@@ -25,7 +25,7 @@ body {
   overflow-x: hidden;
   position: relative;
   background-color: #121212 !important;
-  color: #fff !important;
+  color: #E7EBE5FF !important;
   font-family: 'Karla', sans-serif !important;
 }
 
@@ -63,7 +63,7 @@ input:focus, textarea:focus, select:focus {
 }
 
 @media (min-width:1700px) {
-  main .container {
+  main .Container {
     max-width: 100%;
     padding: 0 150px;
   }
@@ -143,7 +143,7 @@ nav.navbar .navbar-scrolled .navbar-nav a.nav-link.navbar-link:hover{
   transition: all .3s ease-in-out;
 }
 nav.navbar .navbar-nav a.nav-link.navbar-link.active{
-  background: white left;
+  background: #E7EBE5FF left;
   pointer-events: auto;
   --bg-size: 400%;
   opacity: 1;
@@ -170,16 +170,16 @@ nav.navbar .navbar-nav a.nav-link.navbar-link.active:hover div{
 }
 
 nav.navbar .navbar-nav a.nav-link.navbar-link:hover div{
-  border: .1rem solid white;
+  border: .1rem solid #E7EBE5FF;
 
-  color: #FFFFFF;
+  color: #E7EBE5FF;
 }
 
 nav.navbar .navbar-scrolled .navbar-nav a.nav-link.navbar-link.active{
 
    opacity: 1;
    border: .1rem solid transparent;
-   background-color: white;
+   background-color: #E7EBE5FF;
    overflow: hidden;
    background-position: center;
 
@@ -200,19 +200,19 @@ nav.navbar .navbar-toggler-icon {
   height: 17px;
   background-image: none;
   position: relative;
-  border-bottom: 2px solid #fff;
+  border-bottom: 2px solid #E7EBE5FF;
   transition: all 300ms linear;
   top: -2px;
 }
 nav.navbar .navbar-toggler-icon:focus {
-  border-bottom: 2px solid #fff;
+  border-bottom: 2px solid #E7EBE5FF;
 }
 nav.navbar .navbar-toggler-icon:after,
 nav.navbar .navbar-toggler-icon:before {
   width: 24px;
   position: absolute;
   height: 2px;
-  background-color: #fff;
+  background-color: #E7EBE5FF;
   top: 0;
   left: 0;
   content: '';
@@ -224,12 +224,12 @@ nav.navbar .navbar-toggler-icon:after {
 }
 nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:after {
   transform: rotate(45deg);
-  background-color: #fff;
+  background-color: #E7EBE5FF;
   height: 2px;
 }
 nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
   transform: translateY(8px) rotate(-45deg);
-  background-color: #fff;
+  background-color: #E7EBE5FF;
   height: 2px;
 }
 nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
@@ -259,7 +259,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: #E7EBE5FF;
 }
 
 .App-link {
@@ -280,6 +280,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .banner {
   margin: 0;
   height: 100vh;
+  max-height: 2160px;
   width: auto;
   background-color: rgba(0, 0, 0, 0.60);
   display: grid;
@@ -303,6 +304,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 .banner .video-container video {
   width: 100vw;
+  max-height: 2160px;
   height: auto;
   top: -7%;
   left: 0;
@@ -324,7 +326,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   bottom: -3%;
   left: 50%;
   margin-bottom: 4rem;
-  color: #fff;
+  color: #E7EBE5FF;
   font-weight: 700;
   font-size: 2rem;
   transition: all 0.3s ease-in-out;
@@ -363,7 +365,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   text-align: left;
 }
 .banner .connect {
-  color: #fff;
+  color: #E7EBE5FF;
   font-weight: 700;
   font-size: 2rem;
   letter-spacing: 0.08rem;
@@ -379,12 +381,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .banner .connect:hover svg {
   margin-left: 25px;
 }
-.banner img {
-  animation: updown 3s linear infinite;
-}
 
-.banner .resume  {
-  color: #fff;
+.banner .resume, .contact form .submit-button {
+  color: #E7EBE5FF;
   font-weight: bold;
   font-size: 1.5rem;
   letter-spacing: 0.08rem;
@@ -403,21 +402,23 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   transition: all .3s ease-in-out;
 }
 
-.banner .resume span{
-  border: .1rem solid white;
+.banner .resume span, .contact form .submit-button span{
+  border: .1rem solid #E7EBE5FF;
   padding: .8rem;
+
 }
 
-.banner .resume:hover span{
-  border: .1rem solid black;
+.banner .resume:hover span, .contact form .submit-button:hover span{
+  border-color: black;
+  transition: border-color .3s ease-in-out;
 }
 
-.banner .resume:hover  {
+.banner .resume:hover, .contact form .submit-button:hover {
   color: black;
-  background: white;
+  background: #E7EBE5FF;;
   background-size: 2.5rem;
   pointer-events: auto;
-  animation: funny-effect linear 15s infinite;
+
 }
 @keyframes updown {
   0% {
@@ -465,7 +466,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   font-size: 2.5rem;
   font-weight: Bold;
   text-align: center;
-  color: #fff;
+  color: #E7EBE5FF;
   transition: all 0.3s ease-in-out;
   --bg-size: 400%;
 }
@@ -511,7 +512,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   font-size: 2.5rem;
   font-weight: Bold;
   text-align: center;
-  color: #fff;
+  color: #E7EBE5FF;
   transition: all 0.5s ease-in-out;
   pointer-events: none;
 }
@@ -537,7 +538,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   bottom: 0;
   width: 35%;
   right: 0;
-  z-index: -4;
+  z-index: -1;
 }
 
 /* projects */
@@ -564,15 +565,15 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 .project:nth-child(1)::after{
-  background: linear-gradient(90deg, var(--pj1-color1), var(--pj1-color2) 111.58%);
+  background: linear-gradient(90deg, var(--pj1-color1), var(--pj1-color2));
 }
 
 .project:nth-child(2)::after{
-  background: linear-gradient(90deg, var(--pj2-color1), var(--pj2-color2) 111.58%);
+  background: linear-gradient(90deg, var(--pj2-color1), var(--pj2-color2));
 }
 
 .project:nth-child(3)::after{
-  background: linear-gradient(90deg, var(--pj3-color1), var(--pj3-color2) 111.58%);
+  background: linear-gradient(90deg, var(--pj3-color1), var(--pj3-color2));
 }
 
 .project .demo-link{
@@ -638,15 +639,15 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 .project:nth-child(1) .my-tag{
-  background: linear-gradient(90.21deg, var(--pj1-color1a), var(--pj1-color2a) 111.58%);
+  background: linear-gradient(90.21deg, var(--pj1-color1a), var(--pj1-color2a));
 }
 
 .project:nth-child(2) .my-tag{
-  background: linear-gradient(90.21deg, var(--pj2-color1a), var(--pj2-color2a) 111.58%);
+  background: linear-gradient(90.21deg, var(--pj2-color1a), var(--pj2-color2a));
 }
 
 .project:nth-child(3) .my-tag{
-  background: linear-gradient(90.21deg, var(--pj3-color1a), var(--pj3-color2a) 111.58%);
+  background: linear-gradient(90.21deg, var(--pj3-color1a), var(--pj3-color2a));
 }
 
 .project-links {
@@ -662,7 +663,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     object-fit: contain;
 }
 
-.projects{
+.projects, .contact{
   background-color: rgb(18, 18, 18);
   display: flex;
   flex-direction: column;
@@ -672,18 +673,18 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   height: auto;
 }
 
-.projects .header-bg {
+.header-bg {
   width: 100%;
   height: auto;
-  margin: 2rem 0 2rem 0;
+  margin: 4.5rem 0 2rem 0;
   padding: 2rem;
   background: url("./assets/img/hBG.png");
   background-size: 2.5rem;
  }
 
-.projects .header-bg  h1 {
+.header-bg  h1 {
   all:initial;
-  color: white;
+  color: #E7EBE5FF;
   font-weight: bold;
   padding: 2rem;
   font-size: 3rem;
@@ -785,63 +786,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   background-size: cover;
   background-repeat: no-repeat;
 }
-.newsletter-bx {
-  background: #FFFFFF;
-  border-radius: 55px;
-  color: #121212;
-  padding: 85px 125px;
-  margin-bottom: 80px;
-  margin-top: -122px;
-}
-.newsletter-bx h3 {
-  font-weight: 700;
-  letter-spacing: 0.5px;
-  line-height: 1.2em;
-}
-.new-email-bx {
-  background: #fff;
-  padding: 5px;
-  border-radius: 20px;
-  position: relative;
-  display: flex;
-  align-items: center;
-}
-.new-email-bx::before {
-  content: "";
-  background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
-  border-radius: 20px;
-  position: absolute;
-  top: -1px;
-  left: -1px;
-  bottom: -1px;
-  right: -1px;
-}
-.new-email-bx::after {
-  content: "";
-  background: #fff;
-  border-radius: 20px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-}
-.new-email-bx input {
-  width: 100%;
-  color: #121212;
-  font-weight: 500;
-  background: transparent;
-  border: 0;
-  padding: 0 15px;
-}
-.new-email-bx button {
-  background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
-  padding: 20px 65px;
-  color: #fff;
-  font-weight: 500;
-  letter-spacing: 0.5px;
-  border-radius: 18px;
-}
 .footer img {
   width: 26%;
 }
@@ -851,4 +795,191 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   color: #B8B8B8;
   letter-spacing: 0.5px;
   margin-top: 20px;
+}
+
+/************ Contact Css ************/
+.contact {
+  background: linear-gradient(60deg, var(--pj3-color2a), var(--pj1-color2a));
+  color: #E7EBE5FF;
+  padding-bottom: 3rem;
+}
+.contact .header-bg{
+  background: url("./assets/img/hBG.png");
+  background-size: 2.5rem;
+}
+.contact .contents {
+  /*display both elements in the same line*/
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: auto;
+}
+.contact .at-decor{
+  width: 50%;
+  height: auto;
+  object-fit: contain;
+  position: relative;
+  place-self: start;
+  top: 0;
+  left: -3rem;
+  transform: scale(1.2);
+  margin-bottom: 3rem;
+}
+
+.contact form{
+  width: 50%;
+  height: auto;
+  object-fit: contain;
+  margin:2rem 4rem 0 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact h1{
+  color: #E7EBE5FF;
+}
+
+.contact .contents form .input-group{
+  /*display both elements in the same line*/
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: auto;
+  margin: 0 0 .8rem 0;
+}
+.contact .contents form .input-group div:nth-child(1){
+  width: 50%;
+  padding: 0 .4rem 0 0;
+}
+.contact .contents form .input-group div:nth-child(2){
+  width: 50%;
+  padding: 0 0 0 .4rem;
+}
+
+.contact form .input-group input{
+  width: 100%;
+  background: rgba(0, 0, 0, 0.1);
+  border: .1rem solid rgba(255, 255, 255, 0.25);
+  border-radius: 1.5rem !important;
+  color: #E7EBE5FF;
+  padding: 1.3rem 1.5rem;
+  font-weight: normal;
+  font-size: large;
+  transition: color, background-color 0.3s ease-in-out;
+  min-height: 4rem;
+}
+
+.contact form textarea{
+  height: 15rem;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.1);
+  border: .1rem solid rgba(255, 255, 255, 0.25);
+  border-radius: 1.5rem;
+  color: #E7EBE5FF;
+  margin: 0;
+  padding: 1.3rem 1.5rem;
+  font-weight: normal;
+  font-size: large;
+
+  transition: color, background-color 0.3s ease-in-out;
+  min-height: 10rem;
+}
+
+.contact form input:focus, .contact form textarea:focus {
+  background: #E7EBE5FF;
+  color: #121212;
+}
+.contact form input::placeholder, .contact form textarea::placeholder {
+  font-weight: 400;
+  color: #E7EBE5FF;
+}
+.contact form input:focus::placeholder, .contact form textarea:focus::placeholder {
+  color: #121212;
+  opacity: 0.8;
+}
+.contact form .submit-button {
+  /* more styles next to resume button */
+  margin: 2rem .8rem 0 .8rem;
+  width: 60%;
+  height: 4rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+
+  transition: all 0.3s;
+}
+
+.contact form .submit-button span {
+  /* more styles next to resume button */
+  pointer-events: none;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact form .submit-button.success, .contact form .submit-button.success:hover{
+  margin: 2rem .8rem 0 .8rem;
+  background: #5dbb49;
+  color: #E7EBE5FF;
+  pointer-events: none;
+}
+
+.contact form .submit-button span.success, .contact form .submit-button.success:hover span{
+  color: #E7EBE5FF;
+  background: #5dbb49;
+  border-color: #E7EBE5FF;
+  background-size: 2.5rem;
+  pointer-events: none;
+}
+
+.contact form .submit-button.error, .contact form .submit-button.error:hover{
+  margin: 2rem .8rem 0 .8rem;
+  color: #E7EBE5FF;
+  background: #bb4949;
+  pointer-events: none;
+}
+
+.contact form .submit-button span.error, .contact form .submit-button.error:hover span{
+  color: #E7EBE5FF;
+  background: #bb4949;
+  border-color: #E7EBE5FF;
+  background-size: 2.5rem;
+  pointer-events: none;
+}
+
+
+
+
+@media screen and (max-width: 1000px) {
+  .contact .at-decor{
+    display: none;
+  }
+
+  .contact form{
+    width: 100%;
+    padding: 0;
+    margin: 1rem;
+  }
+  .contact .contents form .input-group {
+    /*display both elements in the same line*/
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .contact .contents form .input-group div:nth-child(1){
+    width: 100%;
+    padding: 0 0 .8rem 0;
+  }
+  .contact .contents form .input-group div:nth-child(2){
+    width: 100%;
+    padding: 0 0 0 0;
+  }
+
 }
