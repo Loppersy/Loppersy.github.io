@@ -72,9 +72,26 @@ nav.navbar {
   z-index: 9999;
   transition: all 0.32s ease-in-out;
 }
+nav.navbar h1{
+  font-family: Montserrat, sans-serif;
+  font-weight: bolder;
+  font-size: clamp(.5rem, 8vw, 2rem);
+  letter-spacing: .2rem;
+  justify-self: left;
+  color: rgba(231, 235, 229, 0);
+  margin: 0;
+  padding: 0 0 0 clamp(0em, 2vw, .5em);
+
+  transition: all 0.3s ease-in-out;
+}
 nav.navbar.scrolled {
   padding: 0;
+  min-height: 4.5em;
   background: #000000;
+}
+
+nav.navbar.scrolled h1{
+  color: rgb(231, 235, 229);
 }
 
 nav.navbar a.navbar-brand {
@@ -265,20 +282,15 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   font-weight: bold;
   letter-spacing: 0.08rem;
   line-height: 1;
-  display: block;
-  text-align: left;
 }
 
 .banner h2 {
   font-size: clamp(1.5rem, 8vw, 2.5rem);
-  display: block;
-  text-align: left;
 }
 .banner p {
   color: #B8B8B8;
   font-size: clamp(1rem, 6vw, 1.8rem);
   letter-spacing: 0.08rem;
-  text-align: left;
 }
 
 .banner .resume, .contact form .submit-button {
@@ -321,18 +333,22 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 }
 
-.moreButton {
-  position: absolute;
-  bottom: -3%;
-  left: 50%;
-  margin-bottom: 4rem;
-  color: #E7EBE5FF;
-  font-weight: 700;
-  font-size: 2rem;
-  transition: all 0.3s ease-in-out;
-  animation: updown 4s ease-out infinite;
-  transform: translateY(-.3rem)translateX(-50%) scaleX(4) scaleY(3);
+
+@media (min-height: 40em) {
+  .moreButton {
+    position: absolute;
+    padding: 0;
+    align-self: center;
+    color: #E7EBE5FF;
+    font-weight: bold;
+    font-size: clamp(1rem, 8vw, 2.5rem);
+    animation: updown 4s ease-out infinite;
+    top: 90dvh;
+    left: 50%;
+    transition: top 0.3s ease-in-out;
+  }
 }
+
 .moreButton.scrolled {
   color: rgba(0, 0, 0, 0);
   transition: color 0.3s ease-in-out;
@@ -488,15 +504,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   }
 }
 
-.background-image-right {
-  top: 200%;
-  position: absolute;
-  bottom: 0;
-  width: 35%;
-  right: 0;
-  z-index: -1;
-}
-
 /* projects */
 .project {
   position: relative;
@@ -607,10 +614,18 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 .project-links {
-   place-content: center;
+  display: flex;
+  align-content: center;
+  place-content: center;
+  justify-content: center;
+  margin: auto 0;
 }
 .project-links a {
   padding: .3rem;
+  display: flex;
+  align-content: center;
+  place-content: center;
+  justify-content: center;
 }
 
 .project-links .googleImg {
@@ -633,7 +648,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   width: 100%;
   height: auto;
   margin: 4.5rem 0 2rem 0;
-  padding: 2rem;
+  padding: 2rem 0;
+  text-align: center;
   background: url("./assets/img/hBG.png");
   background-size: 2.5rem;
  }
@@ -643,12 +659,11 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   color: #E7EBE5FF;
   font-weight: bold;
   padding: 2rem;
-  font-size: 3rem;
+  font-size: clamp(1rem, 8vw, 3rem);
   letter-spacing: .2rem;
 }
 
-@media only screen and (max-aspect-ratio: 1/1) {
-
+@media only screen and (max-width: 61.99em) {
 
   .projects {
     width: 100%;
@@ -730,16 +745,20 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 /************ Footer Css ************/
 .footer {
-  padding: 50px 0 50px 0;
-  background-color: red;;
+  padding: 1em;
+  background-color: #121212;
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
 }
-.footer img {
-  width: 26%;
+.footer h1 {
+  text-align: center;
+  font-family: Montserrat, sans-serif;
+  font-weight: bold;
+  font-size: clamp(1rem, 8vw, 1.5rem);
 }
 .footer p {
+  text-align: center;
   font-weight: 400;
   font-size: 14px;
   color: #B8B8B8;
@@ -904,9 +923,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 
-
-
-@media screen and (max-aspect-ratio: 1/1) {
+@media screen and (max-width: 61.99em) {
   .contact .at-decor{
     display: none;
   }

@@ -25,6 +25,8 @@ export const Banner = () => {
             } else {
                 document.querySelector(".video-container").style.display = 'none';
             }
+
+
         }
         window.addEventListener('scroll', onScroll);
 
@@ -33,6 +35,7 @@ export const Banner = () => {
 
     return (
         <section className={'banner'} id="home">
+
             <div className={"video-container"}>
                 <video autoPlay loop muted src={PacVideo}/>
             </div>
@@ -43,18 +46,13 @@ export const Banner = () => {
                             <h2>Hello! I'm</h2>
                             <h1>Sebastian<br/>Lopez<br/>Figueroa</h1>
                             <p>Software Engineer<br/>& Game Developer</p>
-                            {/*<button className={"connect"} onClick={() => console.log('connect')}>Let’s Connect <ArrowRightCircle size={25}/>*/}
-                            {/*</button>*/}
-                            {/*<button className={"connect"} onClick={() => console.log('connect')}>View Resume <ArrowRightCircle size={25}/>*/}
-                            {/*</button>*/}
                             <button className="resume"><span>View Resume</span></button>
                         </div>
 
                 </Row>
-                <button className={"moreButton " + (scrolled ? 'scrolled' : '')} title={"See More"}>
-                        <Nav.Link href="#projects"><ChevronCompactDown/></Nav.Link>
-                </button>
             </div>
+            <a className={"moreButton " + (scrolled ? 'scrolled' : '')} title={"See More"} href="#projects"><ChevronCompactDown/></a>
+
 
         </section>
     )
