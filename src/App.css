@@ -310,7 +310,11 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   background-size: 2.5rem;
   pointer-events: auto;
   transition: background 0.3s ease-in-out;
+}
+.contact form .submit-button{
 
+  --bg-size: 200vh;
+  animation: funny-effect linear 45s infinite;
 }
 
 .banner .resume span, .contact form .submit-button span{
