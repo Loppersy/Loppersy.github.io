@@ -5,7 +5,6 @@ import vid2 from "../assets/video/TilesDemo.webm";
 import projImg3 from "../assets/img/giantsDemo.png";
 import githubIcon from "../assets/img/GitHub-Logo.png";
 import googlePlayIcon from "../assets/img/google-play.svg";
-import colorSharp2 from "../assets/img/color-sharp2.png";
 
 export const Projects = () => {
 
@@ -58,7 +57,6 @@ export const Projects = () => {
                     </Col>
                 </Row>
             </Container>
-            <img className="background-image-right" src={colorSharp2}></img>
         </section>
     )
 }

@@ -6,20 +6,21 @@
   font-family: Karla;
   src: url('./assets/font/Karla-VariableFont_wght.ttf');
 }
-* {
-  margin: 0;
+
+
+.App {
   padding: 0;
-  box-sizing: border-box;
+  margin: 0;
 }
 
 html {
   scroll-behavior: smooth;
-  height: 100%;
 }
 
 body {
   margin: 0;
   padding: 0;
+  width: 100%;
   height: 100%;
   font-weight: normal;
   overflow-x: hidden;
@@ -62,24 +63,9 @@ input:focus, textarea:focus, select:focus {
   outline: none;
 }
 
-@media (min-width:1700px) {
-  main .Container {
-    max-width: 100%;
-    padding: 0 150px;
-  }
-}
-
-p.success {
-  color: green;
-}
-
-p.danger {
-  color: red;
-}
-
 /************ Navbar Css ************/
 nav.navbar {
-  padding: 1rem 0;
+  padding: 2rem 0;
   position: fixed;
   width: 100%;
   top: 0;
@@ -109,6 +95,8 @@ nav.navbar .navbar-nav .nav-link.navbar-link {
 
   transition: all .3s ease-in-out;
 }
+
+
 nav.navbar .navbar-nav a.nav-link.navbar-link div{
   border: .1rem solid rgba(255, 255, 255, 0.45);
 
@@ -122,6 +110,10 @@ nav.navbar .navbar-scrolled .navbar-nav .nav-link.navbar-link {
 
   transition: all .3s ease-in-out;
 }
+
+
+
+
 nav.navbar .navbar-nav a.nav-link.navbar-link:hover{
   overflow: hidden;
   background: url("./assets/img/hBG.png");
@@ -138,7 +130,7 @@ nav.navbar .navbar-scrolled .navbar-nav a.nav-link.navbar-link:hover{
   background-color: rgba(102, 102, 102, 0);
   overflow: hidden;
   background-position: left;
-
+  animation: funny-effect linear 50s infinite;
 
   transition: all .3s ease-in-out;
 }
@@ -236,89 +228,97 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   border-color: transparent;
 }
 
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: #E7EBE5FF;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-
 /************ Banner Css ************/
 .banner {
   margin: 0;
-  height: 100vh;
-  max-height: 2160px;
-  width: auto;
-  background-color: rgba(0, 0, 0, 0.60);
-  display: grid;
-  padding-top: 2rem;
-  place-items: center;
-  align-content: center;
+  width: 100%;
+  height: auto;
   overflow: hidden;
 }
 
-.banner .video-container {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  z-index: -1;
-
-  -webkit-transform-style: preserve-3d;
-  -webkit-backface-visibility: hidden;
-}
-
-.banner .video-container video {
-  width: 100vw;
-  max-height: 2160px;
-  height: auto;
-  top: -7%;
-  left: 0;
-  transition: top 0.5s;
-}
-@media only screen and (max-aspect-ratio: 1/1) {
-  .banner .video-container video{
-    width: auto;
+@media (min-height: 40em) {
+  .banner {
     height: 100vh;
-    top: 0;
-    left: auto;
-    right: 0;
-
+    width: auto;
   }
+}
+
+.banner .info-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100%;
+  width: 100%;
+  margin: 0 clamp(4em, 5vh, 6em) 0 clamp(1em, 5vw, 6em);
+  padding:  0 0 ;
+}
+
+@media (max-height: 40em) {
+  .banner .info-container{
+    margin: 8em clamp(1em, 5vw, 6em);
+  }
+}
+
+.banner h1 {
+  font-size: clamp(2.5rem, 15vw, 4.5rem);
+  font-weight: bold;
+  letter-spacing: 0.08rem;
+  line-height: 1;
+  display: block;
+  text-align: left;
+}
+
+.banner h2 {
+  font-size: clamp(1.5rem, 8vw, 2.5rem);
+  display: block;
+  text-align: left;
+}
+.banner p {
+  color: #B8B8B8;
+  font-size: clamp(1rem, 6vw, 1.8rem);
+  letter-spacing: 0.08rem;
+  text-align: left;
+}
+
+.banner .resume, .contact form .submit-button {
+  color: #E7EBE5FF;
+  font-weight: bold;
+  font-size: clamp(.5rem, 6vw, 2rem);
+  letter-spacing: 0.08rem;
+  display: flex;
+  align-items: center;
+  border: .1rem solid transparent;
+  padding: .2rem;
+  margin-top: 3rem;
+  overflow: hidden;
+  --bg-size: 300%;
+
+  background: rgba(0, 0, 0, 0) url("./assets/img/hBG.png") left;
+  animation: funny-effect linear 45s infinite;
+  background-size: 2.5rem;
+  pointer-events: auto;
+  transition: background 0.3s ease-in-out;
+
+}
+
+.banner .resume span, .contact form .submit-button span{
+  border: .1rem solid #E7EBE5FF;
+  padding: .8em;
+  pointer-events: none;
+  transition: color, border .3s ease-in-out;
+}
+
+.banner .resume:hover span, .contact form .submit-button:hover span{
+  border-color: black;
+}
+
+.banner .resume:hover, .contact form .submit-button:hover {
+  color: black;
+  background: #E7EBE5FF;;
+  background-size: 2.5rem;
+  pointer-events: auto;
+
 }
 
 .moreButton {
@@ -343,83 +343,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   cursor: auto;
 }
 
-.banner h1 {
-  font-size: 4.5rem;
-  font-weight: 700;
-  letter-spacing: 0.08rem;
-  line-height: 1;
-  display: block;
-  text-align: left;
-}
-
-.banner h2 {
-  display: block;
-  text-align: left;
-}
-.banner p {
-  margin-top: 1.5rem;
-  color: #B8B8B8;
-  font-size: 1.8rem;
-  letter-spacing: 0.08rem;
-  width: 96%;
-  text-align: left;
-}
-.banner .connect {
-  color: #E7EBE5FF;
-  font-weight: 700;
-  font-size: 2rem;
-  letter-spacing: 0.08rem;
-  display: flex;
-  align-items: center;
-}
-.banner .connect svg {
-  font-size: 25px;
-  margin-left: 10px;
-  transition: 0.3s ease-in-out;
-  line-height: 1;
-}
-.banner .connect:hover svg {
-  margin-left: 25px;
-}
-
-.banner .resume, .contact form .submit-button {
-  color: #E7EBE5FF;
-  font-weight: bold;
-  font-size: 1.5rem;
-  letter-spacing: 0.08rem;
-  display: flex;
-  align-items: center;
-  border: .1rem solid transparent;
-  padding: .2rem;
-  margin-top: 3rem;
-  overflow: hidden;
-  --bg-size: 300%;
-
-  background: rgba(0, 0, 0, 0) url("./assets/img/hBG.png") left;
-  animation: funny-effect linear 45s infinite;
-  background-size: 2.5rem;
-  pointer-events: auto;
-  transition: all .3s ease-in-out;
-}
-
-.banner .resume span, .contact form .submit-button span{
-  border: .1rem solid #E7EBE5FF;
-  padding: .8rem;
-
-}
-
-.banner .resume:hover span, .contact form .submit-button:hover span{
-  border-color: black;
-  transition: border-color .3s ease-in-out;
-}
-
-.banner .resume:hover, .contact form .submit-button:hover {
-  color: black;
-  background: #E7EBE5FF;;
-  background-size: 2.5rem;
-  pointer-events: auto;
-
-}
 @keyframes updown {
   0% {
     transform: translateY(-.3rem) translateX(-50%) scaleX(4) scaleY(3);
@@ -440,9 +363,42 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     transform: translateY(-.3rem)translateX(-50%) scaleX(4) scaleY(3);
   }
 }
-.txt-rotate > .wrap {
-  border-right: 0.08em solid #666;
+
+.banner .video-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+
+  -webkit-transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+ overflow: hidden;
 }
+
+.banner .video-container video {
+  width: 100vw;
+  max-height: 2160px;
+  height: auto;
+  top: -7%;
+  left: 0;
+  transition: top 0.5s;
+
+  -webkit-transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+}
+@media only screen and (max-aspect-ratio: 1/1) {
+  .banner .video-container video{
+    width: auto;
+    height: 100vh;
+    top: 0;
+    left: auto;
+    right: 0;
+
+  }
+}
+
 
 /************ Projects Css ************/
 :root{
@@ -691,7 +647,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   letter-spacing: .2rem;
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-aspect-ratio: 1/1) {
 
 
   .projects {
@@ -766,12 +722,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   height: auto;
 }
 
-@media(prefers-reduced-motion) {
-  .project {
-    transition: none;
-  }
-}
-
 .show {
     opacity: 1;
     filter: blur(0);
@@ -781,7 +731,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 /************ Footer Css ************/
 .footer {
   padding: 50px 0 50px 0;
-  background-image: url('./assets/img/footer-bg.png');
+  background-color: red;;
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -907,7 +857,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   flex-direction: row;
   justify-content: center;
 
-
+  animation: funny-effect linear 120s infinite;
   transition: all 0.3s;
 }
 
@@ -956,7 +906,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-aspect-ratio: 1/1) {
   .contact .at-decor{
     display: none;
   }

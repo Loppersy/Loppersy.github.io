@@ -36,8 +36,7 @@ export const Banner = () => {
             <div className={"video-container"}>
                 <video autoPlay loop muted src={PacVideo}/>
             </div>
-            <Container>
-
+            <div className={"info-container"}>
                 <Row className={'align-items-center'}>
 
                         <div className={"letters"}>
@@ -55,8 +54,7 @@ export const Banner = () => {
                 <button className={"moreButton " + (scrolled ? 'scrolled' : '')} title={"See More"}>
                         <Nav.Link href="#projects"><ChevronCompactDown/></Nav.Link>
                 </button>
-
-            </Container>
+            </div>
 
         </section>
     )

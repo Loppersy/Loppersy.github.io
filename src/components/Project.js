@@ -6,7 +6,7 @@ export function Project(props) {
     let link2
     let demo
     if(props.videoDemo !== "") {
-        demo = <video className={"demo"} controls={true} autoPlay={true} loop muted src={props.videoDemo}/>
+        demo = <video className={"demo"}  autoPlay={true} loop muted src={props.videoDemo}/>
     } else if (props.imageDemo !== "") {
         demo = <img className={"demo"} src={props.imgDemo} alt={"Demo"}/>
     }
