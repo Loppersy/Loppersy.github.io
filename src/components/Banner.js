@@ -1,10 +1,8 @@
-import Container from "react-bootstrap/Container";
-import {Col, Row} from "react-bootstrap";
-import {ArrowRightCircle, Grid} from "react-bootstrap-icons";
+import {Row} from "react-bootstrap";
 import PacVideo from "../assets/video/BGVideo.webm";
 import {ChevronCompactDown} from "react-bootstrap-icons";
-import Nav from "react-bootstrap/Nav";
 import {useEffect, useState} from "react";
+import resume from "../assets/docs/ResumeSLF.pdf";
 
 export const Banner = () => {
 
@@ -46,7 +44,7 @@ export const Banner = () => {
                             <h2>Hello! I'm</h2>
                             <h1>Sebastian<br/>Lopez<br/>Figueroa</h1>
                             <p>Software Engineer<br/>& Game Developer</p>
-                            <button className="resume"><span>View Resume</span></button>
+                            <a className="resume" href={resume} target={"_blank"} rel={"noreferrer"}><span>View Resume</span></a>
                         </div>
 
                 </Row>

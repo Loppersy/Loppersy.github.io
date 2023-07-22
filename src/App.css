@@ -295,15 +295,14 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 .banner .resume, .contact form .submit-button {
   color: #E7EBE5FF;
+  text-decoration: none;
   font-weight: bold;
   font-size: clamp(.5rem, 6vw, 2rem);
   letter-spacing: 0.08rem;
-  display: flex;
-  align-items: center;
+  display: inline-flex;
   border: .1rem solid transparent;
   padding: .2rem;
   margin-top: 3rem;
-  overflow: hidden;
   --bg-size: 300%;
 
   background: rgba(0, 0, 0, 0) url("./assets/img/hBG.png") left;
