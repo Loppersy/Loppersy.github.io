@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.f53cd37a.css",
-    "main.js": "/portfolio/static/js/main.7e31f10b.js",
-    "static/js/787.7d01fdad.chunk.js": "/portfolio/static/js/787.7d01fdad.chunk.js",
-    "static/media/giantsDemo.png": "/portfolio/static/media/giantsDemo.df76551f3b7a3886f5fc.png",
-    "static/media/PacDemo.webm": "/portfolio/static/media/PacDemo.29b4759ca03319e305a1.webm",
-    "static/media/TilesDemo.webm": "/portfolio/static/media/TilesDemo.d2db7ea57b0e9439c210.webm",
-    "static/media/BGVideo.webm": "/portfolio/static/media/BGVideo.a3e2a8eceade5f28e6fd.webm",
-    "static/media/Montserrat-VariableFont_wght.ttf": "/portfolio/static/media/Montserrat-VariableFont_wght.3faa3eef13649db02044.ttf",
-    "static/media/ResumeSLF.pdf": "/portfolio/static/media/ResumeSLF.75b874aa86b3ee7b4a4d.pdf",
-    "static/media/tiles_banner.png": "/portfolio/static/media/tiles_banner.08ed29590f6db2590de0.png",
-    "static/media/Karla-VariableFont_wght.ttf": "/portfolio/static/media/Karla-VariableFont_wght.873b3ab26751da74a1bc.ttf",
-    "static/media/GitHub-Logo.png": "/portfolio/static/media/GitHub-Logo.acf261ee2d6b2d56e428.png",
-    "static/media/logo.svg": "/portfolio/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
-    "index.html": "/portfolio/index.html",
-    "static/media/google-play.svg": "/portfolio/static/media/google-play.fbc9fc11adee978a80554a3aa33fc581.svg",
-    "main.f53cd37a.css.map": "/portfolio/static/css/main.f53cd37a.css.map",
-    "main.7e31f10b.js.map": "/portfolio/static/js/main.7e31f10b.js.map",
-    "787.7d01fdad.chunk.js.map": "/portfolio/static/js/787.7d01fdad.chunk.js.map"
+    "main.css": "/static/css/main.684dc69f.css",
+    "main.js": "/static/js/main.f2aae54d.js",
+    "static/js/787.7d01fdad.chunk.js": "/static/js/787.7d01fdad.chunk.js",
+    "static/media/giantsDemo.png": "/static/media/giantsDemo.df76551f3b7a3886f5fc.png",
+    "static/media/PacDemo.webm": "/static/media/PacDemo.29b4759ca03319e305a1.webm",
+    "static/media/TilesDemo.webm": "/static/media/TilesDemo.d2db7ea57b0e9439c210.webm",
+    "static/media/BGVideo.webm": "/static/media/BGVideo.a3e2a8eceade5f28e6fd.webm",
+    "static/media/Montserrat-VariableFont_wght.ttf": "/static/media/Montserrat-VariableFont_wght.3faa3eef13649db02044.ttf",
+    "static/media/ResumeSLF.pdf": "/static/media/ResumeSLF.75b874aa86b3ee7b4a4d.pdf",
+    "static/media/tiles_banner.png": "/static/media/tiles_banner.08ed29590f6db2590de0.png",
+    "static/media/Karla-VariableFont_wght.ttf": "/static/media/Karla-VariableFont_wght.873b3ab26751da74a1bc.ttf",
+    "static/media/GitHub-Logo.png": "/static/media/GitHub-Logo.acf261ee2d6b2d56e428.png",
+    "static/media/logo.svg": "/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/index.html",
+    "static/media/google-play.svg": "/static/media/google-play.fbc9fc11adee978a80554a3aa33fc581.svg",
+    "main.684dc69f.css.map": "/static/css/main.684dc69f.css.map",
+    "main.f2aae54d.js.map": "/static/js/main.f2aae54d.js.map",
+    "787.7d01fdad.chunk.js.map": "/static/js/787.7d01fdad.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f53cd37a.css",
-    "static/js/main.7e31f10b.js"
+    "static/css/main.684dc69f.css",
+    "static/js/main.f2aae54d.js"
   ]
 }
