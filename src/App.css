@@ -572,6 +572,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   height: auto;
   margin: 2rem 1rem 1rem 1rem;
   padding: 0 1rem 0 1rem;
+
+  display: flex;
+  flex-direction: column;
 }
 
 .project-details p {
@@ -618,19 +621,25 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 .project-links {
   display: flex;
-  align-content: center;
-  place-content: center;
+  flex-direction: row;
   justify-content: center;
-  margin: auto 0;
+  margin: 0;
+  padding: 0;
 }
 .project-links a {
-  padding: .3rem;
   display: flex;
-  align-content: center;
-  place-content: center;
   justify-content: center;
+  padding: 0;
+  margin: 0 .5em;
 }
-
+.project-links a img {
+  object-fit: contain;
+  transition: all 0.3s ease-in-out;
+}
+.project-links a:hover img {
+  filter: drop-shadow(0em 0 0.3em rgba(231, 235, 229, 0.9));
+  transform: scale(1.1);
+}
 .project-links .googleImg {
     width: 11rem;
     height: auto;
@@ -646,6 +655,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   width: auto;
   height: auto;
 }
+
+
 
 .header-bg {
   width: 100%;
@@ -765,8 +776,39 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   font-weight: 400;
   font-size: 14px;
   color: #B8B8B8;
-  letter-spacing: 0.5px;
-  margin-top: 20px;
+  padding: 0;
+  margin: 0;
+}
+.socials-icons {
+   display: flex;
+   flex-direction: row;
+   align-content: center;
+   place-content: center;
+   justify-content: center;
+   width: 100%;
+   height: auto;
+   margin: 0;
+  padding: 0;
+ }
+.socials-icons a {
+  margin: 0 clamp(.5em, 1vw, 1em) 0 clamp(.5em, 1vw, 1em);
+  min-width: 3em;
+  height: auto;
+  object-fit: contain;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+}
+.socials-icons img {
+  max-height: 2.5em;
+  object-fit: contain;
+  pointer-events: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.socials-icons a:hover img {
+  filter: drop-shadow(0em 0 0.3em rgba(231, 235, 229, 0.73));
+  transform: scale(1.1);
 }
 
 /************ Contact Css ************/
