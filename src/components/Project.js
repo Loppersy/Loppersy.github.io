@@ -3,6 +3,7 @@ import React from "react";
 export function Project(props) {
     let image1
     let image2
+    let link1
     let link2
     let demo
     if(props.videoDemo !== "") {
@@ -17,8 +18,14 @@ export function Project(props) {
         // image2 =<a className={"demo-link"} href={props.link1} target="_blank" rel="noreferrer">{demo}</a>;
         image2 = <div className={"demo-link"}>{demo}</div>;
     }
-    if(props.link2 !== "") {
+
+    if(props.link1 !== ""){
+       link1 = <a href={props.link1} target="_blank" rel="noreferrer"><img src={props.link1Img} alt={"Github"}/></a>
+    }
+    if(props.link2 !== "" && props.link2Img === ""){
       link2 =  <a href={props.link2 + '&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'} target="_blank" rel="noreferrer"><img className={"googleImg"} alt='Get it on Google Play' src={'https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png'}/></a>
+    } else if (props.link2 !== "" && props.link2Img !== "") {
+        link2 = <a href={props.link2} target="_blank" rel="noreferrer"><img src={props.link2Img} alt={"Link 2"}/></a>
     }
     return (
         <div className="project">
@@ -32,7 +39,7 @@ export function Project(props) {
                 ))}
                 </section>
                 <div className="project-links">
-                    <a href={props.link1} target="_blank" rel="noreferrer"><img src={props.link1Img} alt={"Github"}/></a>
+                    {link1}
                     {link2}
                 </div>
             </div>

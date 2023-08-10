@@ -250,12 +250,17 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   margin: 0;
   width: 100%;
   height: auto;
+  position: relative;
+  display: flex;
   overflow: hidden;
+  justify-content: center;
+    align-content: center;
+  place-content: center;
 }
 
 @media (min-height: 40em) {
   .banner {
-    height: 100vh;
+    height: min(100vh, 1080px);
     width: auto;
   }
 }
@@ -268,7 +273,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   height: 100%;
   width: 100%;
   margin: 0 clamp(4em, 5vh, 6em) 0 clamp(1em, 5vw, 6em);
-  padding:  0 0 ;
+  max-width: 1500px;
+
 }
 
 @media (max-height: 40em) {
@@ -398,7 +404,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 .banner .video-container video {
   width: 100vw;
-  max-height: 2160px;
   height: auto;
   top: -7%;
   left: 0;
@@ -421,18 +426,22 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 /************ Projects Css ************/
 :root{
-  --pj1-color1: rgb(40, 246, 74);
-  --pj1-color2: rgb(31, 224, 249);
+  --pj1-color1: rgb(189, 36, 95);
+  --pj1-color2: rgb(255, 93, 152);
   --pj2-color1: rgb(246, 40, 40);
   --pj2-color2: rgb(255, 186, 36);
   --pj3-color1: rgb(163, 40, 246);
   --pj3-color2: rgb(77, 85, 255);
-  --pj1-color1a: rgba(40, 246, 74, 0.55);
-  --pj1-color2a: rgba(31, 224, 249, 0.55);
+  --pj4-color1: rgb(40, 246, 74);
+  --pj4-color2: rgb(31, 224, 249);
+  --pj1-color1a: rgba(189, 36, 95, 0.55);
+  --pj1-color2a: rgba(255, 93, 152, 0.55);
   --pj2-color1a: rgba(246, 40, 40, 0.55);
   --pj2-color2a: rgba(255, 186, 36, 0.55);
   --pj3-color1a: rgba(163, 40, 246, 0.55);
   --pj3-color2a: rgba(77, 85, 255, 0.55);
+  --pj4-color1a: rgba(40, 246, 74, 0.55);
+  --pj4-color2a: rgba(31, 224, 249, 0.55);
 }
 
 
@@ -482,6 +491,18 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   pointer-events: auto;
 }
 
+.project:nth-child(4) .funny-title a{
+  background: linear-gradient(
+          90deg,
+          var(--pj4-color1),
+          var(--pj4-color2),
+          var(--pj4-color1)
+  ) 0 0 / var(--bg-size) 50%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  pointer-events: auto;
+}
+
 .project .funny-title{
   text-decoration: none;
   font-size: 2.5rem;
@@ -490,6 +511,12 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   color: #E7EBE5FF;
   transition: all 0.5s ease-in-out;
   pointer-events: none;
+
+  margin: 0 0 1rem 0;
+  display: flex;
+justify-content: center;
+  align-items: center;
+
 }
 
 .project .funny-title:hover{
@@ -509,15 +536,14 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 /* projects */
 .project {
-  position: relative;
   background-color: black;
   display: flex;
   flex-direction: row;
   height: auto;
   width: 100%;
   margin-bottom: 3rem;
-  border-radius: 3rem;
-  transition: all ease-in-out 0.3s;
+  border-radius: 2.5rem;
+  transition: all ease-in-out 0.8s;
   overflow: hidden;
 }
 
@@ -542,6 +568,10 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   background: linear-gradient(90deg, var(--pj3-color1), var(--pj3-color2));
 }
 
+.project:nth-child(4)::after{
+  background: linear-gradient(90deg, var(--pj4-color1), var(--pj4-color2));
+}
+
 .project .demo-link{
   width: auto;
   height: auto;
@@ -554,38 +584,35 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   width: auto;
   height: auto;
   aspect-ratio: 3/2;
-  max-width: 40vw;
+  max-width: 40rem;
   margin: 0;
   padding: 0;
-
-}
-
-.project img {
-  width: 3rem;
-  height: auto;
-  object-fit: contain;
-  margin: .5rem 0 .5rem 0;
 }
 
 .project .project-details {
   width: auto;
-  height: auto;
-  margin: 2rem 1rem 1rem 1rem;
-  padding: 0 1rem 0 1rem;
+  /*margin: 2rem 1rem 1rem 1rem;*/
+  /*padding: 0 1rem 0 1rem;*/
+
+  margin: 1rem 3rem;
+  padding: 3rem 0;
 
   display: flex;
   flex-direction: column;
+  justify-content: center;
+
 }
 
 .project-details p {
   width: 100%;
-  height: auto;
   text-align: left;
   font-family: Karla, sans-serif;
   font-weight: normal;
   font-size: 1.3rem;
-  margin: 1rem 0 1rem 0;
+  margin: 0 0 2rem 0;
+
   color: #B8B8B8;
+
 }
 
 
@@ -594,6 +621,10 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   flex-direction: row;
   flex-wrap: wrap;
   text-align: left;
+
+  margin: 0 0 1rem 0;
+
+  align-items: center;
 }
 
 .project-details .my-tag {
@@ -605,6 +636,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   font-weight: bold;
   font-family: Montserrat, sans-serif;
   color: rgba(255, 255, 255, 0.71);
+
+  max-height: 2rem;
 }
 
 .project:nth-child(1) .my-tag{
@@ -619,12 +652,18 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   background: linear-gradient(90.21deg, var(--pj3-color1a), var(--pj3-color2a));
 }
 
+.project:nth-child(4) .my-tag{
+  background: linear-gradient(90.21deg, var(--pj4-color1a), var(--pj4-color2a));
+}
+
 .project-links {
   display: flex;
   flex-direction: row;
   justify-content: center;
   margin: 0;
   padding: 0;
+;
+  align-items: center;
 }
 .project-links a {
   display: flex;
@@ -635,6 +674,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .project-links a img {
   object-fit: contain;
   transition: all 0.3s ease-in-out;
+  width: auto;
+  max-height: 3.5rem;
+  margin: .5rem 0 .5rem 0;
 }
 .project-links a:hover img {
   filter: drop-shadow(0em 0 0.3em rgba(231, 235, 229, 0.9));
@@ -642,6 +684,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 .project-links .googleImg {
     width: 11rem;
+  max-height: 4rem;
     height: auto;
     object-fit: contain;
 }
@@ -813,9 +856,11 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 /************ Contact Css ************/
 .contact {
-  background: linear-gradient(60deg, var(--pj3-color2a), var(--pj1-color2a));
+  background: linear-gradient(60deg, var(--pj3-color2a), var(--pj4-color2a));
   color: #E7EBE5FF;
   padding-bottom: 3rem;
+  display: flex;
+  align-items: center;
 }
 .contact .header-bg{
   background: url("./assets/img/hBG.png");
@@ -827,6 +872,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   flex-direction: row;
   width: 100%;
   height: auto;
+  max-width: 1500px;
 }
 .contact .at-decor{
   width: 50%;
@@ -838,6 +884,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   left: -3rem;
   transform: scale(1.2);
   margin-bottom: 3rem;
+  max-height: 600px;
 }
 
 .contact form{

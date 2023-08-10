@@ -3,12 +3,37 @@ import { Project } from "./Project";
 import vid1 from "../assets/video/PacDemo.webm";
 import vid2 from "../assets/video/TilesDemo.webm";
 import projImg3 from "../assets/img/giantsDemo.png";
+import projImg4 from "../assets/img/rotaractDemo.png";
 import githubIcon from "../assets/img/GitHub-Logo.png";
 import googlePlayIcon from "../assets/img/google-play.svg";
+import livesiteIcon from "../assets/img/livesiteIcon.png";
 
 export const Projects = () => {
 
     const projects = [
+        {
+            videoDemo: "",
+            imgDemo: projImg4,
+            title: "Rotaract Club of Prince George Website",
+            description: "An upgraded website for a non-profit organization. I worked closely with the club members to customize their existing site according to their new needs and preference. More specifically, I revamped the entire homepage, upgraded the styling of the entire website, implemented responsive design, and added a few extra pages, such as the \"Get involved!\" page.",
+            tags: ["JavaScript", "CSS", "Photoshop", "HTML", "Mobile", "Web Development", "UI", "Publishing"],
+            link1: "",
+            link1Img: "",
+            link2: "https://portal.clubrunner.ca/15849/",
+            link2Img: livesiteIcon,
+            imageLocation: "left",
+        },
+        {
+            videoDemo: vid2,
+            title: "Tiles - Puzzle Game",
+            description: "\"Tiles\" is a mobile puzzle game made in Unity (C#) and published in Google Play. Use your problem-solving skills to walk over all tiles on the screen, but without backtracking. New elements are introduced as the game goes on to keep the player engaged. All assets, illustrations, animations and coding were made by me.",
+            tags: ["Unity", "C#", "Photoshop", "Animation", "Mobile", "UI", "Game Design & Development", "Publishing"],
+            link1: "https://github.com/Loppersy/Tiles",
+            link1Img: githubIcon,
+            link2: "https://play.google.com/store/apps/details?id=com.selofi.tiles",
+            link2Img: "",
+            imageLocation: "right",
+        },
         {
             videoDemo: vid1,
             title: "Machine Learning Pacman",
@@ -21,17 +46,6 @@ export const Projects = () => {
             imageLocation: "left",
         },
         {
-            videoDemo: vid2,
-            title: "Tiles - Puzzle Game",
-            description: "\"Tiles\" is a mobile puzzle game made in Unity (C#) and published in Google Play. Use your problem-solving skills to walk over all tiles on the screen, but without backtracking. New elements are introduced as the game goes on to keep the player engaged. All assets, illustrations, animations and coding were made by me.",
-            tags: ["Unity", "C#", "Photoshop", "Animation", "Mobile", "UI", "Game Design & Development", "Publishing"],
-            link1: "https://github.com/Loppersy/Tiles",
-            link1Img: githubIcon,
-            link2: "https://play.google.com/store/apps/details?id=com.selofi.tiles",
-            link2Img: googlePlayIcon,
-            imageLocation: "right",
-        },
-        {
             videoDemo: "",
             imgDemo: projImg3,
             title: "Multiplayer Shooter",
@@ -41,7 +55,7 @@ export const Projects = () => {
             link1Img: githubIcon,
             link2: "",
             link2Img: "",
-            imageLocation: "left",
+            imageLocation: "right",
         },
     ];
 
@@ -54,6 +68,7 @@ export const Projects = () => {
                         <Project {...projects[0]} />
                         <Project {...projects[1]} />
                         <Project {...projects[2]} />
+                        <Project {...projects[3]} />
                     </Col>
                 </Row>
             </Container>
