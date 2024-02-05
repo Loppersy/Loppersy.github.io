@@ -1,46 +1,57 @@
 import React from "react";
 
-export function Project(props) {
+export function Project({ videoDemo, imageDemo, imgDemo, imageLocation, link1, link1Img, link2, link2Img, title, description, tags }) {
     let image1
     let image2
-    let link1
-    let link2
+    let link1Element
+    let link2Element
     let demo
-    if(props.videoDemo !== "") {
-        demo = <video className={"demo"}  autoPlay={true} loop muted src={props.videoDemo}/>
-    } else if (props.imageDemo !== "") {
-        demo = <img className={"demo"} src={props.imgDemo} alt={"Demo"}/>
+    let titleLink // Variable for dynamically setting the title link
+
+    if(videoDemo !== "") {
+        demo = <video className={"demo"}  autoPlay={true} loop muted src={videoDemo}/>
+    } else if (imageDemo !== "") {
+        demo = <img className={"demo"} src={imgDemo} alt={"Demo"}/>
     }
-    if(props.imageLocation === "left") {
-        // image1 = <a className={"demo-link"} href={props.link1} target="_blank" rel="noreferrer">{demo}</a>;
+    if(imageLocation === "left") {
         image1 = <div className={"demo-link"}>{demo}</div>;
     } else {
-        // image2 =<a className={"demo-link"} href={props.link1} target="_blank" rel="noreferrer">{demo}</a>;
         image2 = <div className={"demo-link"}>{demo}</div>;
     }
 
-    if(props.link1 !== ""){
-       link1 = <a href={props.link1} target="_blank" rel="noreferrer"><img src={props.link1Img} alt={"Github"}/></a>
+    if(link1 !== "" && link1Img !== ""){
+        link1Element = <a href={link1} target="_blank" rel="noreferrer"><img src={link1Img} alt={"Github"}/></a>
+        titleLink = link1; // Use link1 if available
     }
-    if(props.link2 !== "" && props.link2Img === ""){
-      link2 =  <a href={props.link2 + '&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'} target="_blank" rel="noreferrer"><img className={"googleImg"} alt='Get it on Google Play' src={'https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png'}/></a>
-    } else if (props.link2 !== "" && props.link2Img !== "") {
-        link2 = <a href={props.link2} target="_blank" rel="noreferrer"><img src={props.link2Img} alt={"Link 2"}/></a>
+    if(link2 !== "" && link2Img === ""){
+        link2Element =  <a href={`${link2}&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1`} target="_blank" rel="noreferrer"><img className={"googleImg"} alt='Get it on Google Play' src={'https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png'}/></a>
+        if (!link1Element) titleLink = link2; // Use link2 if link1 is not set
+    } else if (link2 !== "" && link2Img !== "") {
+        link2Element = <a href={link2} target="_blank" rel="noreferrer"><img src={link2Img} alt={"Link 2"}/></a>
+        if (!link1Element) titleLink = link2; // Use link2 if link1 is not set
     }
+
+    // Dynamically set the title link based on availability of link1 or fallback to link2
+    const titleElement = titleLink ? (
+        <h2 className={"funny-title"}><a href={titleLink} target="_blank" rel="noreferrer">{title}</a></h2>
+    ) : (
+        <h2 className={"funny-title"}>{title}</h2> // Render without link if neither is available
+    );
+
     return (
         <div className="project">
             {image1}
             <div className="project-details">
-                <h2 className={"funny-title"}><a href={props.link1} target="_blank" rel="noreferrer">{props.title}</a></h2>
-                <p>{props.description}</p>
+                {titleElement}
+                <p>{description}</p>
                 <section className="project-tags">
-                {props.tags.map((tag) => (
-                    <span className="my-tag" key={tag}>{tag}</span>
-                ))}
+                    {tags.map((tag) => (
+                        <span className="my-tag" key={tag}>{tag}</span>
+                    ))}
                 </section>
                 <div className="project-links">
-                    {link1}
-                    {link2}
+                    {link1Element}
+                    {link2Element}
                 </div>
             </div>
             {image2}
