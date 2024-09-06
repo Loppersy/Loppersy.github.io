@@ -4,6 +4,7 @@ import vid1 from "../assets/video/PacDemo.webm";
 import vid2 from "../assets/video/TilesDemo.webm";
 import projImg3 from "../assets/img/giantsDemo.png";
 import projImg4 from "../assets/img/rotaractDemo.png";
+import projImg5 from "../assets/img/HoopDemo.png";
 import githubIcon from "../assets/img/GitHub-Logo.png";
 import googlePlayIcon from "../assets/img/google-play.svg";
 import livesiteIcon from "../assets/img/livesiteIcon.png";
@@ -16,7 +17,7 @@ export const Projects = () => {
             imgDemo: projImg4,
             title: "Rotaract Club of Prince George Website",
             description: "I collaborated closely with members of a non-profit organization to enhance their website. Tailoring the existing site to meet their new requirements and preferences, I overhauled the homepage, refined the overall styling, introduced responsive design, and incorporated additional pages, including the new \"Get Involved!\" section.",
-            tags: ["JavaScript", "CSS", "Photoshop", "HTML", "Mobile", "Web Development", "UI", "Publishing"],
+            tags: ["JavaScript", "CSS", "Photoshop", "HTML", "Responsive Design", "Web Development", "UI", "Publishing"],
             link1: "",
             link1Img: "",
             link2: "https://portal.clubrunner.ca/15849/",
@@ -57,6 +58,18 @@ export const Projects = () => {
             link2Img: "",
             imageLocation: "right",
         },
+        {
+            videoDemo: "",
+            imgDemo: projImg5,
+            title: "Hoop-A-Thon Fundraiser Website",
+            description: "Collaborated with the 3 Rotary Clubs of Prince George to design and develop a dedicated website for their first Hoop-A-Thon fundraiser. The site provides comprehensive details about the event, including participant registration, donation options, and sponsorship opportunities. Key features include a responsive design for seamless viewing across devices, an appealing yet simple aesthetic, and integrated options for individuals and teams to register or donate directly online. The event rose around 10,000$ to support youth at risk, families living in poverty, and various Rotary community projects in Prince George. ",
+            tags: ["Web Development", "UI/UX Design", "Responsive Design", "HTML", "CSS", "JavaScript", "Photoshop", "Volunteering"],
+            link1: "https://portal.clubrunner.ca/15849/page/hoop-a-thon",
+            link1Img: livesiteIcon,
+            link2: "",
+            link2Img: "",
+            imageLocation: "right",
+        },
     ];
 
     return (
@@ -65,6 +78,7 @@ export const Projects = () => {
             <Container>
                 <Row>
                     <Col size={12}>
+                        <Project {...projects[4]} />
                         <Project {...projects[0]} />
                         <Project {...projects[1]} />
                         <Project {...projects[2]} />

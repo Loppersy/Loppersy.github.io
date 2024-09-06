@@ -425,23 +425,28 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 
 /************ Projects Css ************/
-:root{
+:root {
   --pj1-color1: rgb(189, 36, 95);
   --pj1-color2: rgb(255, 93, 152);
   --pj2-color1: rgb(246, 40, 40);
   --pj2-color2: rgb(255, 186, 36);
   --pj3-color1: rgb(163, 40, 246);
   --pj3-color2: rgb(77, 85, 255);
-  --pj4-color1: rgb(40, 246, 74);
-  --pj4-color2: rgb(31, 224, 249);
+  --pj4-color1: rgb(0, 123, 255);
+  --pj4-color2: rgb(102, 178, 255);
+  --pj5-color1: rgb(52, 168, 83);
+  --pj5-color2: rgb(102, 255, 153);
+
   --pj1-color1a: rgba(189, 36, 95, 0.55);
   --pj1-color2a: rgba(255, 93, 152, 0.55);
   --pj2-color1a: rgba(246, 40, 40, 0.55);
   --pj2-color2a: rgba(255, 186, 36, 0.55);
   --pj3-color1a: rgba(163, 40, 246, 0.55);
   --pj3-color2a: rgba(77, 85, 255, 0.55);
-  --pj4-color1a: rgba(40, 246, 74, 0.55);
-  --pj4-color2a: rgba(31, 224, 249, 0.55);
+  --pj4-color1a: rgba(0, 123, 255, 0.55);
+  --pj4-color2a: rgba(102, 178, 255, 0.55);
+  --pj5-color1a: rgba(52, 168, 83, 0.55);
+  --pj5-color2a: rgba(102, 255, 153, 0.55);
 }
 
 
@@ -502,6 +507,28 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   background-clip: text;
   pointer-events: auto;
 }
+
+/* Fifth Project Color Scheme */
+.project:nth-child(5) .funny-title a {
+  background: linear-gradient(
+          90deg,
+          var(--pj5-color1),
+          var(--pj5-color2),
+          var(--pj5-color1)
+  ) 0 0 / var(--bg-size) 50%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  pointer-events: auto;
+}
+
+.project:nth-child(5)::after {
+  background: linear-gradient(90deg, var(--pj5-color1), var(--pj5-color2));
+}
+
+.project:nth-child(5) .my-tag {
+  background: linear-gradient(90.21deg, var(--pj5-color1a), var(--pj5-color2a));
+}
+
 
 .project .funny-title{
   text-decoration: none;
@@ -880,7 +907,7 @@ justify-content: center;
 
 /************ Contact Css ************/
 .contact {
-  background: linear-gradient(60deg, var(--pj3-color2a), var(--pj4-color2a));
+  background: linear-gradient(60deg, var(--pj3-color2a), var(--pj5-color2a));
   color: #E7EBE5FF;
   padding-bottom: 3rem;
   display: flex;
