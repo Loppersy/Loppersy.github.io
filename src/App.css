@@ -539,12 +539,21 @@ justify-content: center;
   background-color: black;
   display: flex;
   flex-direction: row;
+
   height: auto;
   width: 100%;
   margin-bottom: 3rem;
   border-radius: 2.5rem;
   transition: all ease-in-out 0.8s;
   overflow: hidden;
+}
+.project:nth-child(odd) {
+  flex-direction: row-reverse; /* Reverse row direction for odd projects */
+}
+
+/* For even projects, media on the left */
+.project:nth-child(even) {
+  flex-direction: row; /* Normal row direction for even projects */
 }
 
 .project::after{
@@ -720,36 +729,33 @@ justify-content: center;
   letter-spacing: .2rem;
 }
 
-@media only screen and (max-width: 61.99em) {
-
+@media only screen and (max-width: 1200px) {
   .projects {
     width: 100%;
     padding: 0;
     margin: 0;
   }
 
+  .projects .container {
+    max-width: 700px;
+  }
+
+  .project:nth-child(odd) {
+    flex-direction: column;  /* Reverse row direction for odd projects */
+  }
+
+  /* For even projects, media on the left */
+  .project:nth-child(even) {
+    flex-direction: column;  /* Normal row direction for even projects */
+  }
+
   .project {
     width: 100%;
+    max-width: 700px;
     height: auto;
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse; /* Change to column-reverse to have media at the bottom */
     margin: 0 0 2rem 0;
-  }
-  .project .project-details a{
-    width: 100%;
-    height: auto;
-    float: none;
-    object-fit: contain;
-
-  }
-  .project .demo-link .demo{
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    aspect-ratio: 3/2;
-    max-width: none;
-    margin: 0;
-    padding: 0;
   }
 
   .project .project-details {
@@ -761,7 +767,7 @@ justify-content: center;
     padding: 2rem 1rem 1rem 1rem;
   }
 
-  .project .project-details p{
+  .project .project-details p {
     width: 100%;
     padding: .7rem;
     margin: 0;
@@ -773,10 +779,28 @@ justify-content: center;
     margin: 0;
   }
 
-  .project .funny-title:hover{
+  .project .demo-link {
+    width: 100%;
+    height: auto;
+    display: flex;
+    top: 0;
+  }
+
+  .project .demo-link .demo {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    aspect-ratio: 3/2;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .project .funny-title:hover {
     transform: scale(1.05);
   }
 }
+
 
 .project h1 {
   font-size: 1rem;
@@ -1015,7 +1039,7 @@ justify-content: center;
 }
 
 
-@media screen and (max-width: 61.99em) {
+@media screen and (max-width: 1200px) {
   .contact .at-decor{
     display: none;
   }
