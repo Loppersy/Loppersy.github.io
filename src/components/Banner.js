@@ -43,7 +43,7 @@ export const Banner = () => {
                         <div className={"letters"}>
                             <h2>Hello! I'm</h2>
                             <h1>Sebastian<br/>Lopez<br/>Figueroa</h1>
-                            <p>Software Engineer<br/>& Game Developer</p>
+                            <p>Software Engineer<br/>& Developer</p>
                             <a className="resume" href={resume} target={"_blank"} rel={"noreferrer"}><span>View Resume</span></a>
                         </div>
 
