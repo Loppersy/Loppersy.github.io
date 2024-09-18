@@ -64,7 +64,7 @@ export const Projects = () => {
             title: "Hoop-A-Thon Fundraiser Website",
             description: "Collaborated with the 3 Rotary Clubs of Prince George to design and develop a dedicated website for their first Hoop-A-Thon fundraiser. The site provides comprehensive details about the event, including participant registration, donation options, and sponsorship opportunities. Key features include a responsive design for seamless viewing across devices, an appealing yet simple aesthetic, and integrated options for individuals and teams to register or donate directly online. The event rose around 10,000$ to support youth at risk, families living in poverty, and various Rotary community projects in Prince George. ",
             tags: ["Web Development", "UI/UX Design", "Responsive Design", "HTML", "CSS", "JavaScript", "Photoshop", "Volunteering"],
-            link1: "http://localhost:63342/rotaract-website/Hoop-A-Thon.html",
+            link1: "https://www.selofi.com/rotaract-website/Hoop-A-Thon.html",
             link1Img: livesiteIcon,
             link2: "https://github.com/Loppersy/rotaract-website",
             link2Img: githubIcon,
