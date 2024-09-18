@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.c41cb585.css",
-    "main.js": "/static/js/main.3459095c.js",
+    "main.js": "/static/js/main.08d0d953.js",
     "static/js/787.7d01fdad.chunk.js": "/static/js/787.7d01fdad.chunk.js",
     "static/media/rotaractDemo.png": "/static/media/rotaractDemo.2c85bd07dfc165a0772a.png",
     "static/media/giantsDemo.png": "/static/media/giantsDemo.df76551f3b7a3886f5fc.png",
@@ -19,11 +19,11 @@
     "index.html": "/index.html",
     "static/media/google-play.svg": "/static/media/google-play.fbc9fc11adee978a80554a3aa33fc581.svg",
     "main.c41cb585.css.map": "/static/css/main.c41cb585.css.map",
-    "main.3459095c.js.map": "/static/js/main.3459095c.js.map",
+    "main.08d0d953.js.map": "/static/js/main.08d0d953.js.map",
     "787.7d01fdad.chunk.js.map": "/static/js/787.7d01fdad.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c41cb585.css",
-    "static/js/main.3459095c.js"
+    "static/js/main.08d0d953.js"
   ]
 }
